@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane stylesheets="@estilo.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.VeiculoVerFx">
+   <children>
+      <AnchorPane styleClass="card" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="32.0" styleClass="titulo" text="Todos os Veículos" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+
+            <HBox alignment="CENTER" spacing="8.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="65.0">
+               <children>
+                  <ComboBox fx:id="cmbFiltro" prefWidth="150.0" />
+                  <TextField fx:id="txtPesquisa" prefWidth="280.0" promptText="Pesquisar matrícula, marca ou modelo..." />
+                  <Button onAction="#pesquisar" prefHeight="32.0" styleClass="btn-primary" text="Pesquisar" />
+               </children>
+            </HBox>
+
+            <TableView fx:id="tabela" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="115.0">
+               <columns>
+                  <TableColumn fx:id="colTipo" text="Tipo" />
+                  <TableColumn fx:id="colChassi" text="Nº Chassi" />
+                  <TableColumn fx:id="colMatricula" text="Matrícula" />
+                  <TableColumn fx:id="colMarca" text="Marca" />
+                  <TableColumn fx:id="colModelo" text="Modelo" />
+                  <TableColumn fx:id="colCapacidade" text="Capac. (t)" />
+                  <TableColumn fx:id="colProprietario" text="Proprietário" />
+                  <TableColumn fx:id="colAccao" text="Acção" />
+               </columns>
+            </TableView>
+
+            <Label fx:id="lblMsg" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,105 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 21/10/2026, 15:08:45
+    Author     : user
+*/
+.root { -fx-background-color: #f4f4f4; }
+
+/* Cartão e título */
+.card {
+    -fx-background-color: white;
+    -fx-background-radius: 12;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 15, 0.2, 0, 4);
+}
+.titulo {
+    -fx-background-color: #FBB540;
+    -fx-background-radius: 20;
+    -fx-font-size: 20px;
+    -fx-text-fill: #222;
+    -fx-alignment: center;
+}
+
+/* Formulários */
+.campo-label { -fx-font-weight: bold; -fx-font-size: 12px; }
+.text-field, .password-field {
+    -fx-background-color: white;
+    -fx-border-color: #ccc;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-pref-height: 32;
+}
+.btn-primary {
+    -fx-background-color: #FBB540;
+    -fx-text-fill: #333;
+    -fx-background-radius: 4;
+    -fx-cursor: hand;
+}
+.btn-primary:hover { -fx-background-color: #f0a520; }
+.btn-perigo {
+    -fx-background-color: #e5534b;
+    -fx-text-fill: white;
+    -fx-background-radius: 4;
+    -fx-cursor: hand;
+}
+.btn-perigo:hover { -fx-background-color: #cf3f37; }
+
+/* Menu lateral */
+.sidebar { -fx-background-color: #FBB540; -fx-padding: 15 0 15 0; }
+.logo { -fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #222; -fx-padding: 0 20 15 20; }
+.menu-btn {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0;
+    -fx-text-fill: #222;
+    -fx-font-size: 13px;
+    -fx-alignment: center-left;
+    -fx-padding: 10 20 10 20;
+    -fx-cursor: hand;
+}
+.menu-btn:hover { -fx-background-color: rgba(255,255,255,0.3); }
+.menu-btn.ativo { -fx-background-color: white; -fx-font-weight: bold; }
+.conteudo { -fx-background-color: #f4f4f4; -fx-padding: 20; }
+
+/* Dashboard */
+.stat {
+    -fx-background-color: #fff6e5;
+    -fx-background-radius: 10;
+    -fx-padding: 15;
+    -fx-alignment: center;
+    -fx-spacing: 4;
+}
+.stat-num { -fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #222; }
+.stat-txt { -fx-font-size: 12px; -fx-text-fill: #555; }
+
+/* Submenu */
+.submenu-btn {
+    -fx-background-color: rgba(255,255,255,0.2);
+    -fx-background-radius: 0;
+    -fx-text-fill: #222;
+    -fx-font-size: 12px;
+    -fx-alignment: center-left;
+    -fx-padding: 8 20 8 38;
+    -fx-cursor: hand;
+}
+.submenu-btn:hover { -fx-background-color: rgba(255,255,255,0.45); }
+.submenu-btn.ativo { -fx-background-color: white; -fx-font-weight: bold; }
+
+/* Tabelas */
+.table-view .column-header-background { -fx-background-color: #FBB540; }
+.table-view .column-header, .table-view .filler { -fx-background-color: #FBB540; }
+.table-view .column-header .label { -fx-text-fill: #222; -fx-font-weight: bold; }
+.table-view:focused .table-row-cell:selected { -fx-background-color: #fff0cc; }
+
+.combo-box {
+    -fx-background-color: white;
+    -fx-border-color: #ccc;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-pref-height: 32;
+}
+
+/* Separadores (TabPane) */
+.tab-pane > .tab-header-area > .headers-region > .tab { -fx-background-color: #fff0cc; }
+.tab-pane > .tab-header-area > .headers-region > .tab:selected { -fx-background-color: #FBB540; }

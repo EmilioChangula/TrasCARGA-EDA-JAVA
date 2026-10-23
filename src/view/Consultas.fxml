@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane stylesheets="@estilo.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.ConsultasFx">
+   <children>
+      <AnchorPane styleClass="card" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="32.0" styleClass="titulo" text="Consultas" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+
+            <TabPane tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="65.0">
+               <tabs>
+                  <Tab text="Transportes por proprietário">
+                     <content>
+                        <AnchorPane>
+                           <children>
+                              <HBox alignment="CENTER_LEFT" spacing="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="15.0">
+                                 <children>
+                                    <Label styleClass="campo-label" text="Proprietário" />
+                                    <ComboBox fx:id="cmbProprietario" prefWidth="320.0" promptText="-- Seleccionar --" />
+                                 </children>
+                              </HBox>
+                              <TableView fx:id="tabelaProp" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
+                                 <columns>
+                                    <TableColumn fx:id="colData" sortable="false" text="Data" />
+                                    <TableColumn fx:id="colCliente" sortable="false" text="Cliente" />
+                                    <TableColumn fx:id="colVeiculo" sortable="false" text="Veículo" />
+                                    <TableColumn fx:id="colQuantidade" sortable="false" text="Qtd. (t)" />
+                                    <TableColumn fx:id="colOrigem" sortable="false" text="Origem" />
+                                    <TableColumn fx:id="colDestino" sortable="false" text="Destino" />
+                                    <TableColumn fx:id="colValor" sortable="false" text="Valor" />
+                                 </columns>
+                              </TableView>
+                              <Label fx:id="lblResumoProp" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Total arrecadado por veículo">
+                     <content>
+                        <AnchorPane>
+                           <children>
+                              <HBox alignment="CENTER_LEFT" spacing="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="15.0">
+                                 <children>
+                                    <Label styleClass="campo-label" text="Veículo" />
+                                    <ComboBox fx:id="cmbVeiculo" prefWidth="360.0" promptText="-- Seleccionar --" />
+                                 </children>
+                              </HBox>
+                              <VBox styleClass="stat" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="75.0">
+                                 <children>
+                                    <Label fx:id="lblTotalVeic" styleClass="stat-num" text="—" />
+                                    <Label fx:id="lblDetalheVeic" styleClass="stat-txt" text="Selecciona um veículo" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

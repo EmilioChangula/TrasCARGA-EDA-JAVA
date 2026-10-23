@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane stylesheets="@estilo.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.ProprietarioFormFx">
+   <children>
+      <AnchorPane prefHeight="250.0" styleClass="card" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="lblTitulo" alignment="CENTER" prefHeight="32.0" styleClass="titulo" text="Adicionar Proprietário" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+
+            <HBox spacing="20.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="70.0">
+               <children>
+                  <VBox spacing="6.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label styleClass="campo-label" text="Nome" />
+                        <TextField fx:id="txtNome" maxWidth="Infinity" />
+                     </children>
+                  </VBox>
+                  <VBox spacing="6.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label styleClass="campo-label" text="Contacto" />
+                        <TextField fx:id="txtContacto" maxWidth="Infinity" />
+                     </children>
+                  </VBox>
+                  <VBox spacing="6.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label styleClass="campo-label" text="Documento (BI / NUIT)" />
+                        <TextField fx:id="txtDocumento" maxWidth="Infinity" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+
+            <HBox alignment="CENTER" spacing="10.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="150.0">
+               <children>
+                  <Button fx:id="btnGuardar" onAction="#guardar" prefHeight="30.0" prefWidth="120.0" styleClass="btn-primary" text="Guardar" />
+                  <Button fx:id="btnCancelar" onAction="#cancelar" prefHeight="30.0" prefWidth="120.0" styleClass="btn-primary" text="Limpar" />
+               </children>
+            </HBox>
+
+            <Label fx:id="lblMsg" alignment="CENTER" maxWidth="Infinity" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="200.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

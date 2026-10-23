@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="600.0" prefWidth="1000.0" stylesheets="@estilo.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.PrincipalFx">
+   <left>
+      <VBox fx:id="menuLateral" prefWidth="200.0" spacing="2.0" styleClass="sidebar">
+         <children>
+            <Label styleClass="logo" text="TransCarga" />
+            <Button fx:id="btnDashboard" maxWidth="Infinity" onAction="#abrirDashboard" styleClass="menu-btn" text="Dashboard" />
+
+            <Button maxWidth="Infinity" onAction="#alternarProprietario" styleClass="menu-btn" text="Proprietário  ▾" />
+            <VBox fx:id="subProprietario" managed="false" visible="false">
+               <children>
+                  <Button fx:id="btnPropAdicionar" maxWidth="Infinity" onAction="#abrirProprietarioAdicionar" styleClass="submenu-btn" text="Adicionar" />
+                  <Button fx:id="btnPropVer" maxWidth="Infinity" onAction="#abrirProprietarioVer" styleClass="submenu-btn" text="Ver" />
+               </children>
+            </VBox>
+
+            <Button maxWidth="Infinity" onAction="#alternarVeiculo" styleClass="menu-btn" text="Veículo  ▾" />
+            <VBox fx:id="subVeiculo" managed="false" visible="false">
+               <children>
+                  <Button fx:id="btnVeicAdicionar" maxWidth="Infinity" onAction="#abrirVeiculoAdicionar" styleClass="submenu-btn" text="Adicionar" />
+                  <Button fx:id="btnVeicVer" maxWidth="Infinity" onAction="#abrirVeiculoVer" styleClass="submenu-btn" text="Ver" />
+               </children>
+            </VBox>
+
+            <Button maxWidth="Infinity" onAction="#alternarCliente" styleClass="menu-btn" text="Cliente  ▾" />
+            <VBox fx:id="subCliente" managed="false" visible="false">
+               <children>
+                  <Button fx:id="btnCliAdicionar" maxWidth="Infinity" onAction="#abrirClienteAdicionar" styleClass="submenu-btn" text="Adicionar" />
+                  <Button fx:id="btnCliVer" maxWidth="Infinity" onAction="#abrirClienteVer" styleClass="submenu-btn" text="Ver" />
+               </children>
+            </VBox>
+
+            <Button maxWidth="Infinity" onAction="#alternarCarregamento" styleClass="menu-btn" text="Carregamento  ▾" />
+            <VBox fx:id="subCarregamento" managed="false" visible="false">
+               <children>
+                  <Button fx:id="btnCarrAdicionar" maxWidth="Infinity" onAction="#abrirCarregamentoAdicionar" styleClass="submenu-btn" text="Adicionar" />
+                  <Button fx:id="btnCarrVer" maxWidth="Infinity" onAction="#abrirCarregamentoVer" styleClass="submenu-btn" text="Ver" />
+                  <Button fx:id="btnCarrConsultas" maxWidth="Infinity" onAction="#abrirConsultas" styleClass="submenu-btn" text="Consultas" />
+               </children>
+            </VBox>
+
+            <Region VBox.vgrow="ALWAYS" />
+            <Button maxWidth="Infinity" onAction="#sair" styleClass="menu-btn" text="Sair" />
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <StackPane fx:id="areaConteudo" styleClass="conteudo" />
+   </center>
+</BorderPane>
